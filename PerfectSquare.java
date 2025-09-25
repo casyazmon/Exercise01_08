@@ -9,11 +9,15 @@ public class PerfectSquare {
 	}
 	
 	public static boolean isPerfectSquare(int num) {
-        for(int i = 1; i < num; i++) {
-        	if(i*i = num) 
+        if (num < 0) return false;
+        if (num == 0 || num == 1) return true;
+
+		for(int i = 1; i <= num / i; i++) {
+        	if(i * i == num) 
         		return true;
-        	else if (i*i > num) return false;
+        	else if (i * i > num) return false;
         }
+        return false;
     }
 
 }
